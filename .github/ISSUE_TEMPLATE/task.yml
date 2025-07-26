@@ -1,0 +1,175 @@
+name: 🔧 Task
+description: Improvement, refactoring, performance, security, or maintenance task
+title: '[TASK] '
+labels: ['task']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for improvements, refactoring, performance optimizations, security updates, and maintenance tasks.
+
+  - type: dropdown
+    id: task-category
+    attributes:
+      label: Task Category
+      description: What type of task is this?
+      options:
+        - Improvement (Enhance existing functionality)
+        - Refactoring (Code restructuring/cleanup)
+        - Performance (Speed/optimization improvements)
+        - Security (Security updates/vulnerabilities)
+        - Maintenance (Updates, dependencies, cleanup)
+        - Documentation (Docs, comments, README)
+        - Testing (Add/improve tests)
+        - Bug Fix (Fix existing issues)
+        - Accessibility (A11y improvements)
+        - SEO (Search engine optimization)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task-scope
+    attributes:
+      label: Scope
+      description: What part of the system is affected?
+      options:
+        - Frontend (React/Next.js)
+        - Backend (Rails API)
+        - Fullstack (Both FE & BE)
+        - Infrastructure (Deployment/DevOps)
+        - Database (Data structure/changes)
+        - Configuration (Settings/environment)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Task Information**
+
+  - type: input
+    id: task-title
+    attributes:
+      label: Task Title
+      description: A clear and concise title for the task
+      placeholder: 'e.g., Optimize product image loading, Refactor user authentication, Update dependencies'
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: What is the current situation that needs improvement?
+      placeholder: 'Describe the current state or problem...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement-goal
+    attributes:
+      label: Improvement Goal
+      description: What should be improved or changed?
+      placeholder: 'Describe what should be improved, optimized, or changed...'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Design & Technical Details**
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design
+      description: Design considerations, mockups, or UI/UX requirements
+      placeholder: |
+        - Design mockups or wireframes
+        - Color scheme and styling requirements
+        - Responsive design considerations
+        - Accessibility requirements
+        - User interaction patterns
+    validations:
+      required: false
+
+  - type: textarea
+    id: specific-changes
+    attributes:
+      label: Specific Changes Needed
+      description: What specific changes are required?
+      placeholder: |
+        - [ ] Change 1
+        - [ ] Change 2
+        - [ ] Change 3
+    validations:
+      required: false
+
+  - type: textarea
+    id: performance-metrics
+    attributes:
+      label: Performance Metrics (Performance tasks)
+      description: What metrics should be measured?
+      placeholder: |
+        - Load time: Reduce from 3s to 1s
+        - Bundle size: Reduce by 20%
+        - API response: Reduce from 500ms to 200ms
+    validations:
+      required: false
+
+  - type: textarea
+    id: security-concerns
+    attributes:
+      label: Security Concerns (Security tasks)
+      description: What security issues need to be addressed?
+      placeholder: |
+        - Vulnerability: CVE-2023-1234
+        - Risk: SQL injection in user input
+        - Impact: User data exposure
+    validations:
+      required: false
+
+  - type: textarea
+    id: refactoring-details
+    attributes:
+      label: Refactoring Details (Refactoring tasks)
+      description: What code needs to be refactored and why?
+      placeholder: |
+        - Component: UserProfile (too many props)
+        - Issue: Violates single responsibility principle
+        - Solution: Split into smaller components
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Additional Information**
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues
+      description: Link to any related issues, PRs, or documentation
+      placeholder: 'Related to #123, #456, or specific documentation...'
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context, considerations, or notes
+      placeholder: 'Additional context, breaking changes, migration steps...'
+    validations:
+      required: false

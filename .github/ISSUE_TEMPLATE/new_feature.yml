@@ -1,0 +1,142 @@
+name: ✨ New Feature
+description: Add a new function or component
+title: '[NEW FEATURE] '
+labels: ['enhancement']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for adding new functions, components, or features to the clothing shop.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of new feature is this?
+      options:
+        - Frontend Component (React/Next.js)
+        - Backend Function (Rails API)
+        - Fullstack Feature (Both FE & BE)
+        - Page/Route (New page)
+        - API Endpoint (New backend endpoint)
+        - Utility Function (Helper/utility)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Basic Information**
+
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature Name
+      description: Name of the new function, component, or feature
+      placeholder: 'e.g., ProductCard, UserAuthentication, ShoppingCart'
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What does this new feature do?
+      placeholder: 'Describe what this new feature will do...'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Design & Technical Details**
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design
+      description: Design considerations, mockups, or UI/UX requirements
+      placeholder: |
+        - Design mockups or wireframes
+        - Color scheme and styling requirements
+        - Responsive design considerations
+        - Accessibility requirements
+        - User interaction patterns
+    validations:
+      required: false
+
+  - type: textarea
+    id: component-props
+    attributes:
+      label: Component Props (Frontend components)
+      description: What props will this component accept?
+      placeholder: |
+        ```typescript
+        interface ProductCardProps {
+          product: Product;
+          onAddToCart?: (product: Product) => void;
+          showPrice?: boolean;
+        }
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: api-specification
+    attributes:
+      label: API Specification (Backend functions)
+      description: API endpoint details, parameters, responses
+      placeholder: |
+        **Endpoint**: POST /api/cart/add
+        **Parameters**: { product_id: number, quantity: number }
+        **Response**: { success: boolean, cart: Cart }
+        **Authentication**: Required
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ---
+
+        **Implementation Details**
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: What must this feature include?
+      placeholder: |
+        - [ ] Responsive design
+        - [ ] Error handling
+        - [ ] Loading states
+        - [ ] Accessibility (ARIA labels)
+        - [ ] TypeScript types
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What other features/components does this depend on?
+      placeholder: 'Depends on UserContext, ProductAPI, CartService...'
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Screenshots, mockups, or additional context
+      placeholder: 'Screenshots, mockups, design specs, related issues...'
+    validations:
+      required: false
